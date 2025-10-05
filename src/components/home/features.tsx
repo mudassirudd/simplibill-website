@@ -74,14 +74,12 @@ export function Features() {
                 className="group relative"
               >
                 <div className="relative p-8 rounded-2xl bg-white border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl h-full">
-                  {/* Icon */}
                   <div className="mb-6">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon className="h-7 w-7 text-white" />
                     </div>
                   </div>
                   
-                  {/* Content */}
                   <h3 className="text-xl font-bold mb-3 text-gray-900">
                     {feature.title}
                   </h3>
@@ -89,7 +87,37 @@ export function Features() {
                     {feature.description}
                   </p>
                   
-                  {/* Hover effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
+            );
+          })}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-20 max-w-4xl mx-auto"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-3xl p-12 text-white text-center">
+            <h3 className="text-3xl font-bold mb-4">
+              Experience the Power of SimpliBill
+            </h3>
+            <p className="text-xl mb-8 text-blue-50">
+              Join hundreds of healthcare organizations already using our platform 
+              to optimize their revenue cycle management.
+            </p>
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Request a Demo
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
