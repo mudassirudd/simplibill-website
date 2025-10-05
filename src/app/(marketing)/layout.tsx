@@ -1,21 +1,16 @@
-import Footer from "@/components/marketing/footer";
-import Navbar from "@/components/marketing/navbar";
-import React from 'react';
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 
-interface Props {
-    children: React.ReactNode
+export default function MarketingLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
 }
-
-const MarketingLayout = ({ children }: Props) => {
-    return (
-        <>
-            <Navbar />
-            <main className="mx-auto w-full z-40 relative">
-                {children}
-            </main>
-            <Footer />
-        </>
-    );
-};
-
-export default MarketingLayout
