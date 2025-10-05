@@ -205,18 +205,14 @@ None currently! 🎉
 
 This project is private and proprietary to SimpliBill.
 
-## 👥 Contributors
 
-- **Developer:** [Your Name]
-- **Mentor:** [Mentor Name]
-- **Client:** SimpliBill
 
 ## 📞 Support
 
 For questions or issues, contact:
 
 - Email: info@simplibill.io
-- Repository Issues: [Create an issue](https://github.com/YOUR_USERNAME/simplibill-website/issues)
+- Repository Issues: [Create an issue](https://github.com/mudassirudd/simplibill-website/issues)
 
 ---
 
