@@ -1,87 +1,223 @@
-<img src="https://github.com/user-attachments/assets/9594d359-0988-4fec-b588-0dcee51168e3" alt="Vetra Logo" width="50" height="50">
+# SimpliBill Website
 
-# 🚀 Vetra - AI Marketing Automation Platform
+> Healthcare Revenue Cycle Management & Technology Solutions
 
-<img src="https://github.com/user-attachments/assets/df541304-ea1c-4ebe-b6fd-2e093680314f" alt="Vetra Thumbnail">
+A modern, responsive landing page built for SimpliBill - a healthcare revenue cycle management and technology consulting company.
 
-## 🌟 Introduction
-Vetra is an AI-powered marketing automation platform that transforms your marketing workflow in seconds. Built with modern technologies, it offers a sleek interface for managing marketing campaigns, content generation, and performance analytics.
+![Next.js](https://img.shields.io/badge/Next.js-14.2.18-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-18.3.1-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8?style=flat-square&logo=tailwind-css)
 
-## 🔗 Live Preview
+## 🌟 Features
 
-Check out the live demo of caps.ai here: [Live Preview](https://vetra-app.vercel.app/)
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Smooth scroll animations with Framer Motion
+- ✅ Modern UI with Tailwind CSS & shadcn/ui
+- ✅ TypeScript for type safety
+- ✅ SEO optimized
+- ✅ Fast performance with Next.js 14
 
-## 🎥 Watch the Preview Video on YouTube
+## 📋 Sections
 
-Take a look at YouTube video by watching the demo: [Watch the Video](https://youtu.be/dfQ_WwWV6g8) 
+### 🏠 Hero Section
 
-## 💻 Tech Stack
+- Eye-catching headline and description
+- Call-to-action buttons
+- Key statistics (500+ clients, 99.9% accuracy, 24/7 support)
 
-- **Next.js 15** – React framework for production
-- **TailwindCSS** – Utility-first CSS framework
-- **Shadcn UI** – Reusable component system
-- **Framer Motion** – Smooth animations
-- **TypeScript** – Type-safe code
-- **Number Flow** – Smooth number animations
+### 💼 Services (5 Cards)
 
-## 🛠️ Installation
+1. Revenue Cycle Management (RCM)
+2. Healthcare Consulting
+3. Technology Solutions
+4. Outsourcing Services
+5. Training and Education
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/Shreyas-29/vetra.git
-    ```
+### ⚡ Features (7 Items)
 
-2. Install dependencies:
-    ```bash
-    pnpm install
-    # or
-    yarn install
-    ```
+1. Secure, Cloud-Based Access
+2. Real-Time Dashboard
+3. Claims Management
+4. Payment Management
+5. Analytics and Reporting
+6. Customizable Workflows
+7. Patient Engagement
 
-3. Run the development server:
-    ```bash
-    pnpm run dev
-    # or
-    yarn dev
-    ```
+### ℹ️ About Us
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+- Company overview
+- Key statistics and achievements
+- Mission statement
 
-## 🔧 Environment Variables
+### 📞 Contact
 
-Create a `.env` file in the root directory:
+- Contact form
+- Company information
+- Social media links
 
-```env
-NEXT_PUBLIC_APP_URL=your_app_url
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ or 20+
+- pnpm (recommended) or npm
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/simplibill-website.git
+   cd simplibill-website
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   pnpm run dev
+   # or
+   npm run dev
+   ```
+
+4. **Open in browser**
+
+   Visit [http://localhost:3000](http://localhost:3000)
+
+## 📦 Tech Stack
+
+| Technology        | Purpose                         |
+| ----------------- | ------------------------------- |
+| **Next.js 14**    | React framework with App Router |
+| **React 18**      | UI library                      |
+| **TypeScript**    | Type-safe JavaScript            |
+| **Tailwind CSS**  | Utility-first CSS framework     |
+| **Framer Motion** | Animation library               |
+| **shadcn/ui**     | Reusable component library      |
+| **Lucide React**  | Icon library                    |
+| **pnpm**          | Fast package manager            |
+
+## 📁 Project Structure
+
+```
+simplibill-website/
+├── src/
+│   ├── app/
+│   │   ├── (marketing)/
+│   │   │   ├── layout.tsx      # Marketing layout (Navbar + Footer)
+│   │   │   └── page.tsx        # Home page
+│   │   ├── layout.tsx          # Root layout
+│   │   └── globals.css         # Global styles
+│   ├── components/
+│   │   ├── home/
+│   │   │   ├── hero.tsx        # Hero section
+│   │   │   ├── services.tsx    # Services section
+│   │   │   ├── features.tsx    # Features section
+│   │   │   ├── about.tsx       # About Us section
+│   │   │   └── contact.tsx     # Contact section
+│   │   ├── layout/
+│   │   │   ├── navbar.tsx      # Navigation bar
+│   │   │   └── footer.tsx      # Footer
+│   │   └── ui/                 # shadcn/ui components
+│   ├── config/
+│   │   └── site.ts             # Site configuration
+│   └── styles/
+│       └── globals.css         # Global CSS with Tailwind
+├── public/
+│   └── logo.png                # SimpliBill logo
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+└── next.config.js
 ```
 
-## 🚀 Deploy on Vercel
+## 🛠️ Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+| Command      | Description                           |
+| ------------ | ------------------------------------- |
+| `pnpm dev`   | Start development server on port 3000 |
+| `pnpm build` | Build for production                  |
+| `pnpm start` | Start production server               |
+| `pnpm lint`  | Run ESLint                            |
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🎨 Customization
 
+### Update Colors
 
-## 🤝 Contributing
+Colors are defined in `tailwind.config.ts`. Main brand colors:
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- **Primary Blue:** `blue-600` (#0284c7)
+- **Secondary Green:** `emerald-600` (#059669)
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Update Content
 
+- **Site metadata:** `src/config/site.ts`
+- **Services:** `src/components/home/services.tsx`
+- **Features:** `src/components/home/features.tsx`
+- **Contact info:** `src/components/home/contact.tsx` & `src/components/layout/footer.tsx`
 
-## 📜 License
+### Add Logo
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Replace `public/logo.png` with your logo (recommended: 150x40px PNG)
 
+## 🚢 Deployment
 
-## ☕ Buy Me a Coffee
-If you enjoy using this project, consider supporting my work!  
-[Buy Me a Coffee ☕](https://buymeacoffee.com/shreyas29)
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Visit [vercel.com](https://vercel.com)
+3. Sign in with GitHub
+4. Click "Add New" → "Project"
+5. Import your repository
+6. Click "Deploy"
+
+**Auto-deployment:** Every push to `main` branch automatically deploys!
+
+### Environment Variables
+
+Create `.env` file for environment-specific settings:
+
+```env
+NEXT_PUBLIC_APP_URL=https://www.simplibill.io
+```
+
+## 📱 Browser Support
+
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🐛 Known Issues
+
+None currently! 🎉
+
+## 📝 License
+
+This project is private and proprietary to SimpliBill.
+
+## 👥 Contributors
+
+- **Developer:** [Your Name]
+- **Mentor:** [Mentor Name]
+- **Client:** SimpliBill
+
+## 📞 Support
+
+For questions or issues, contact:
+
+- Email: info@simplibill.io
+- Repository Issues: [Create an issue](https://github.com/YOUR_USERNAME/simplibill-website/issues)
 
 ---
 
-Built with ❤️ by [Shreyas Sihasane](https://shreyas-sihasane.vercel.app)
+**Built with ❤️ for SimpliBill Healthcare**
