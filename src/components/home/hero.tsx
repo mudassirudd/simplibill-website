@@ -1,21 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(14,165,233,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.1),transparent_50%)]" />
+      {/* Dark animated background */}
+      <div className="absolute inset-0 bg-background">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.15),transparent_50%)]" />
       </div>
       
       {/* Floating shapes */}
       <motion.div
-        className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
         animate={{
           y: [0, -20, 0],
           scale: [1, 1.1, 1],
@@ -27,7 +27,7 @@ export function Hero() {
         }}
       />
       <motion.div
-        className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
         animate={{
           y: [0, 20, 0],
           scale: [1, 1.2, 1],
@@ -52,7 +52,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-8 border border-blue-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-8 border border-blue-500/20"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -66,11 +66,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-emerald-800 bg-clip-text text-transparent"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent"
             >
               SimpliBill RCM
               <br />
-              <span className="text-blue-600">& Technology</span>
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">& Technology</span>
             </motion.h1>
             
             {/* Description */}
@@ -78,7 +78,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               We specialize in providing comprehensive solutions to healthcare 
               organizations to help manage their revenue cycle and improve 
@@ -94,7 +94,7 @@ export function Hero() {
             >
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all"
+                className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Started
@@ -103,7 +103,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg text-white px-8 py-6 border-2 hover:bg-gray-50 hover:text-black"
+                className="text-lg px-8 py-6 border-2 border-border hover:bg-accent"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Contact Us
@@ -120,29 +120,29 @@ export function Hero() {
               <div className="group">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="text-4xl md:text-5xl font-bold text-blue-600 mb-2"
+                  className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2"
                 >
                   500+
                 </motion.div>
-                <div className="text-gray-600 font-medium">Healthcare Clients</div>
+                <div className="text-muted-foreground font-medium">Healthcare Clients</div>
               </div>
               <div className="group">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="text-4xl md:text-5xl font-bold text-blue-600 mb-2"
+                  className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent mb-2"
                 >
                   99.9%
                 </motion.div>
-                <div className="text-gray-600 font-medium">Accuracy Rate</div>
+                <div className="text-muted-foreground font-medium">Accuracy Rate</div>
               </div>
               <div className="group">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="text-4xl md:text-5xl font-bold text-blue-600 mb-2"
+                  className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-2"
                 >
                   24/7
                 </motion.div>
-                <div className="text-gray-600 font-medium">Support Available</div>
+                <div className="text-muted-foreground font-medium">Support Available</div>
               </div>
             </motion.div>
           </motion.div>
@@ -157,12 +157,12 @@ export function Hero() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-2"
+              className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex items-start justify-center p-2"
             >
               <motion.div
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="w-1.5 h-1.5 bg-gray-400 rounded-full"
+                className="w-1.5 h-1.5 bg-muted-foreground/50 rounded-full"
               />
             </motion.div>
           </motion.div>
