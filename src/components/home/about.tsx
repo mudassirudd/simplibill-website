@@ -19,8 +19,10 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-24 bg-background relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_70%)]" />
+      
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -30,9 +32,9 @@ export function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              About <span className="text-blue-600">SimpliBill</span>
+              About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SimpliBill</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               SimpliBill is a healthcare revenue cycle management (RCM) and 
               technology consulting company.
             </p>
@@ -46,10 +48,10 @@ export function About() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold mb-6">
+              <h3 className="text-3xl font-bold mb-6 text-foreground">
                 Transforming Healthcare Revenue Management
               </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 We understand the challenges that healthcare organizations face, 
                 and we offer customized solutions, tailored to meet the unique 
                 needs of each client. With the healthcare industry facing 
@@ -68,10 +70,10 @@ export function About() {
                     viewport={{ once: true }}
                     className="flex items-center gap-3"
                   >
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                     </div>
-                    <span className="text-gray-700 font-medium">{highlight}</span>
+                    <span className="text-foreground font-medium">{highlight}</span>
                   </motion.div>
                 ))}
               </div>
@@ -86,7 +88,7 @@ export function About() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-emerald-600 p-8 h-[400px] flex items-center justify-center">
-                <div className="text-center text-white">
+                <div className="text-center text-white z-10">
                   <Shield className="h-24 w-24 mx-auto mb-4 opacity-90" />
                   <h4 className="text-2xl font-bold mb-2">Trusted Partner</h4>
                   <p className="text-blue-100">
@@ -119,13 +121,13 @@ export function About() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="text-center p-6 rounded-xl bg-card border border-border hover:border-border/50 transition-colors"
                 >
-                  <Icon className="h-10 w-10 text-blue-600 mx-auto mb-3" />
-                  <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                  <Icon className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">
+                  <div className="text-sm text-muted-foreground font-medium">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -141,11 +143,11 @@ export function About() {
             viewport={{ once: true }}
             className="mt-16 text-center max-w-4xl mx-auto"
           >
-            <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+            <div className="bg-muted/50 border border-border rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
                 Our Mission
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 To empower healthcare organizations with innovative technology 
                 and expert guidance, enabling them to optimize their revenue 
                 cycle, reduce costs, and focus on what matters most – providing 
