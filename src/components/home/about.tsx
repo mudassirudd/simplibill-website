@@ -31,7 +31,7 @@ export function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl text-foreground md:text-5xl font-bold mb-4">
               About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SimpliBill</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

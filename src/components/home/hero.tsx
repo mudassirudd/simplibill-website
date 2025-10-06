@@ -103,7 +103,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8 py-6 border-2 border-border hover:bg-accent"
+                className="text-lg text-foreground px-8 py-6 border-2 border-border hover:bg-accent"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Contact Us
@@ -168,6 +168,8 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+      {/* Bottom gradient fade */}
+<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background pointer-events-none" />
     </section>
   );
 }
