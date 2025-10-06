@@ -37,7 +37,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Company Info */}
@@ -55,7 +55,7 @@ export function Footer() {
                 height={40}
                 className="h-10 w-auto mb-6 brightness-0 invert"
               />
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 SimpliBill is a healthcare revenue cycle management and 
                 technology consulting company dedicated to helping healthcare 
                 organizations optimize their financial performance.
@@ -67,7 +67,7 @@ export function Footer() {
                   <Mail className="h-5 w-5 text-blue-400" />
                   <a 
                     href="mailto:info@simplibill.io" 
-                    className="hover:text-blue-400 transition-colors"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors"
                   >
                     info@simplibill.io
                   </a>
@@ -76,14 +76,14 @@ export function Footer() {
                   <Phone className="h-5 w-5 text-blue-400" />
                   <a 
                     href="tel:+1234567890" 
-                    className="hover:text-blue-400 transition-colors"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors"
                   >
                     +1 (234) 567-890
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-blue-400 mt-1" />
-                  <span>
+                  <span className="text-muted-foreground">
                     Healthcare District<br />
                     Medical Center, Suite 100
                   </span>
@@ -99,13 +99,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-bold text-lg mb-4">Services</h3>
+            <h3 className="text-foreground font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="hover:text-blue-400 transition-colors text-left"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors text-left"
                   >
                     {link}
                   </button>
@@ -121,13 +121,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-bold text-lg mb-4">Company</h3>
+            <h3 className="text-foreground font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection("about")}
-                    className="hover:text-blue-400 transition-colors text-left"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors text-left"
                   >
                     {link}
                   </button>
@@ -143,13 +143,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-bold text-lg mb-4">Resources</h3>
+            <h3 className="text-foreground font-bold text-lg mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
-                    className="hover:text-blue-400 transition-colors"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors"
                   >
                     {link}
                   </a>
@@ -160,7 +160,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
             <motion.p
@@ -168,7 +168,7 @@ export function Footer() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-gray-400 text-sm"
+              className="text-muted-foreground text-sm"
             >
               © {new Date().getFullYear()} SimpliBill. All rights reserved.
             </motion.p>
@@ -183,21 +183,21 @@ export function Footer() {
             >
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -212,10 +212,10 @@ export function Footer() {
               viewport={{ once: true }}
               className="flex items-center gap-6 text-sm"
             >
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-blue-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-blue-400 transition-colors">
                 Terms of Service
               </a>
             </motion.div>
