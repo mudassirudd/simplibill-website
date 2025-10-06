@@ -56,7 +56,7 @@ export function Navbar() {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-md"
+            ? "bg-background/80 backdrop-blur-lg border-b border-border"
             : "bg-transparent"
         }`}
       >
@@ -73,7 +73,7 @@ export function Navbar() {
                 alt="SimpliBill Logo"
                 width={150}
                 height={40}
-                className="h-10 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
             </motion.div>
 
@@ -83,10 +83,10 @@ export function Navbar() {
                 <button
                   key={item.title}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors relative group"
+                  className="text-muted-foreground hover:text-foreground font-medium transition-colors relative group"
                 >
                   {item.title}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
                 </button>
               ))}
             </div>
@@ -95,7 +95,7 @@ export function Navbar() {
             <div className="hidden md:block">
               <Button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-blue-600 hover:bg-blue-700"
+                className="bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20"
               >
                 Get Started
               </Button>
@@ -104,7 +104,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+              className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -123,7 +123,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed top-20 left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40 md:hidden"
+            className="fixed top-20 left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg z-40 md:hidden"
           >
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col gap-4">
@@ -134,7 +134,7 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-left text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
+                    className="text-left text-muted-foreground hover:text-foreground font-medium py-2 transition-colors"
                   >
                     {item.title}
                   </motion.button>
