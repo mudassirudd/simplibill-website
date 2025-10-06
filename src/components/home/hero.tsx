@@ -103,7 +103,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8 py-6 border-2 hover:bg-gray-50"
+                className="text-lg text-white px-8 py-6 border-2 hover:bg-gray-50 hover:text-black"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Contact Us
