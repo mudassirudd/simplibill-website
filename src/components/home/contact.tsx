@@ -18,9 +18,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
     console.log("Form submitted:", formData);
-    // You can integrate with your backend or email service
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,8 +29,10 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-background relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
+      
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,9 +41,9 @@ export function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get in <span className="text-blue-600">Touch</span>
+            Get in <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your revenue cycle management? Contact us today 
             to learn how SimpliBill can help your organization.
           </p>
@@ -59,8 +59,8 @@ export function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold mb-6">Let's Talk</h3>
-              <p className="text-lg text-gray-600 mb-8">
+              <h3 className="text-3xl font-bold mb-6 text-foreground">Let's Talk</h3>
+              <p className="text-lg text-muted-foreground mb-8">
                 We're here to answer any questions you may have about our 
                 services. Reach out to us and we'll respond as soon as possible.
               </p>
@@ -69,16 +69,16 @@ export function Contact() {
             <div className="space-y-6">
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-start gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-blue-600" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                  <h4 className="font-semibold text-foreground mb-1">Email</h4>
                   <a 
                     href="mailto:info@simplibill.io" 
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors"
                   >
                     info@simplibill.io
                   </a>
@@ -87,16 +87,16 @@ export function Contact() {
 
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-start gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-emerald-600" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-emerald-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                  <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                   <a 
                     href="tel:+1234567890" 
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
+                    className="text-muted-foreground hover:text-blue-400 transition-colors"
                   >
                     +1 (234) 567-890
                   </a>
@@ -105,14 +105,14 @@ export function Contact() {
 
               <motion.div
                 whileHover={{ x: 5 }}
-                className="flex items-start gap-4 p-4 rounded-lg hover:bg-blue-50 transition-colors"
+                className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 transition-colors"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-purple-600" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-purple-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                  <p className="text-gray-600">
+                  <h4 className="font-semibold text-foreground mb-1">Location</h4>
+                  <p className="text-muted-foreground">
                     Healthcare District<br />
                     Medical Center, Suite 100
                   </p>
@@ -120,7 +120,6 @@ export function Contact() {
               </motion.div>
             </div>
 
-            {/* Additional info box */}
             <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
               <h4 className="font-bold text-xl mb-2">24/7 Support Available</h4>
               <p className="text-blue-50">
@@ -137,9 +136,9 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border p-8 rounded-2xl shadow-xl">
               <div className="space-y-2">
-                <Label htmlFor="name">Full Name *</Label>
+                <Label htmlFor="name" className="text-foreground">Full Name *</Label>
                 <Input
                   id="name"
                   name="name"
@@ -148,12 +147,12 @@ export function Contact() {
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={handleChange}
-                  className="h-12"
+                  className="h-12 bg-background border-border"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address *</Label>
+                <Label htmlFor="email" className="text-foreground">Email Address *</Label>
                 <Input
                   id="email"
                   name="email"
@@ -162,12 +161,12 @@ export function Contact() {
                   placeholder="john@example.com"
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-12"
+                  className="h-12 bg-background border-border"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="company">Company/Organization</Label>
+                <Label htmlFor="company" className="text-foreground">Company/Organization</Label>
                 <Input
                   id="company"
                   name="company"
@@ -175,12 +174,12 @@ export function Contact() {
                   placeholder="Healthcare Organization"
                   value={formData.company}
                   onChange={handleChange}
-                  className="h-12"
+                  className="h-12 bg-background border-border"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Message *</Label>
+                <Label htmlFor="message" className="text-foreground">Message *</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -188,19 +187,19 @@ export function Contact() {
                   placeholder="Tell us about your needs..."
                   value={formData.message}
                   onChange={handleChange}
-                  className="min-h-[150px] resize-none"
+                  className="min-h-[150px] resize-none bg-background border-border"
                 />
               </div>
 
               <Button 
                 type="submit" 
-                className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700"
+                className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20"
               >
                 Send Message
                 <Send className="ml-2 h-5 w-5" />
               </Button>
 
-              <p className="text-sm text-gray-500 text-center">
+              <p className="text-sm text-muted-foreground text-center">
                 We'll get back to you within 24 hours
               </p>
             </form>
