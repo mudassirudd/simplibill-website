@@ -53,7 +53,7 @@ export function Footer() {
                 alt="SimpliBill Logo"
                 width={150}
                 height={40}
-                className="h-10 w-auto mb-6 brightness-0 invert"
+                className="h-10 w-auto mb-6 "
               />
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 SimpliBill is a healthcare revenue cycle management and 
