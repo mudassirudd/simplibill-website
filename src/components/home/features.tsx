@@ -62,7 +62,7 @@ export function Features() {
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.1),transparent_70%)]" />
       
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto px-4 relative sm:px-6 lg:px-8 max-w-7xl ">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export function Features() {
         </div>
 
         {/* Simple Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto ">
           {simpleFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -217,7 +217,7 @@ export function Features() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="p-6 rounded-2xl bg-card border border-border hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 h-full flex flex-col">
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 h-full flex flex-col ">
                   {/* Image at top */}
                   <div className="relative w-full aspect-[16/10] mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-blue-500/5 to-emerald-500/5">
                     <Image
